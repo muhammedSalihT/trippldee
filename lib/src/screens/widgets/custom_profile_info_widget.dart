@@ -34,7 +34,7 @@ class _ProfileInfoWidgetState extends State<ProfileInfoWidget> {
                   padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      border: Border.all(color: Colors.grey, width: 5)),
+                      border: Border.all(color: Colors.grey, width: 3)),
                   child: ClipOval(
                     child: Image.network(
                       taskProvider.userData!.data.avatar,
