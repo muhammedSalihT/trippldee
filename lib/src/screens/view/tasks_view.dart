@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trippldee_task/src/screens/tasks/widgets/custom_dropdown_widget.dart';
+import 'package:trippldee_task/src/screens/widgets/custom_dropdown_widget.dart';
 
 class TasksView extends StatelessWidget {
   const TasksView({super.key});

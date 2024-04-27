@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:trippldee_task/src/screens/tasks/view_model/tasks_provider.dart';
+import 'package:trippldee_task/src/screens/view_model/tasks_provider.dart';
 
 class CustomDropdownWidget extends StatefulWidget {
   const CustomDropdownWidget({super.key});

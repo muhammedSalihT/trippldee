@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:trippldee_task/src/screens/tasks/view/tasks_view.dart';
-import 'package:trippldee_task/src/screens/tasks/view_model/tasks_provider.dart';
+import 'package:trippldee_task/src/screens/view/tasks_view.dart';
+import 'package:trippldee_task/src/screens/view_model/tasks_provider.dart';
 
 void main() {
   runApp(const MyApp());
