@@ -16,7 +16,7 @@ class CustomCuntryStateDropDownWidgetState
   Widget build(BuildContext context) {
     return Consumer<TasksProvider>(builder: (context, taskProvider, _) {
       return Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           DropdownButton<String>(
             value: taskProvider.currentSelectedCountry,
