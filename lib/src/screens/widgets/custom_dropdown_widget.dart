@@ -12,20 +12,19 @@ class CustomDropdownWidget extends StatefulWidget {
 class CustomDropdownWidgetState extends State<CustomDropdownWidget> {
   @override
   Widget build(BuildContext context) {
-    return Consumer<TasksProvider>(builder: (context, taskPro, _) {
+    return Consumer<TasksProvider>(builder: (context, taskProvider, _) {
       return DropdownButton<String>(
-        value: taskPro.currentCustomDropDownItem,
+        value: taskProvider.currentCustomDropDownItem,
         hint: const Text('More Actions'),
         onChanged: (String? value) {
-          taskPro.changeDropDownItem(value: value!);
+          taskProvider.changeDropDownItem(value: value!);
         },
-        items: taskPro.customDropDownItemList.map(
+        items: taskProvider.customDropDownItemList.map(
           (String value) {
             return DropdownMenuItem<String>(
               value: value,
               child: Text(
                 value,
-                // red color for delete'
                 style: TextStyle(color: value == 'Delete' ? Colors.red : null),
               ),
             );
