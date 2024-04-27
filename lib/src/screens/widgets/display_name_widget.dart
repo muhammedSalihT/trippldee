@@ -5,6 +5,7 @@ class DisplayName extends StatelessWidget {
   final String secondName;
   final String prefix;
   final String suffix;
+  final TextStyle? style;
 
   const DisplayName({
     super.key,
@@ -12,12 +13,14 @@ class DisplayName extends StatelessWidget {
     required this.secondName,
     this.prefix = '',
     this.suffix = '',
+    this.style,
   });
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      '$prefix $firstName $secondName $suffix',
+      '$prefix$firstName $secondName $suffix',
+      style: style,
     );
   }
 }

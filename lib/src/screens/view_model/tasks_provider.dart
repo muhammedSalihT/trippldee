@@ -1,6 +1,8 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:trippldee_task/src/screens/api/task_view_api.dart';
+import 'package:trippldee_task/src/screens/model/profile_info_model.dart';
 
 class TasksProvider extends ChangeNotifier {
   // task 1 data and functions
@@ -34,5 +36,21 @@ class TasksProvider extends ChangeNotifier {
   void changeState({required String value}) {
     currentSelectedState = value;
     notifyListeners();
+  }
+
+  // task 4 data and functions
+
+  ProfileInfoModel? userData;
+
+  void fetchUserData({required String currentUserId}) async {
+    try {
+      final data = await TaskViewApi.getUserData(userId: currentUserId);
+      if (data != null) {
+        userData = data;
+        notifyListeners();
+      }
+    } catch (e) {
+      log(e.toString());
+    }
   }
 }
